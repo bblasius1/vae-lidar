@@ -1,7 +1,5 @@
 # VAE-Based Synthetic LiDAR Scene Generation
 
-> CPSC 440/550 Machine Learning — Course Project (Jan–Apr 2026)  
-> University of British Columbia
 
 Can a Variational Autoencoder trained on real LiDAR scans produce synthetic point clouds that are **geometrically plausible** and **useful as augmentation data** for a downstream 3D object detector?
 
