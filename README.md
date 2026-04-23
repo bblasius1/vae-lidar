@@ -77,19 +77,13 @@ vae-lidar/
 
 ## Setup
 
-### 1. Install Miniconda
-
-Download and install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) if you don't already have it.
-
-### 2. Create environment
+### 1. Create environment
 
 ```bash
-conda create -n vae-lidar python=3.10
-conda activate vae-lidar
 pip install -r requirements.txt
 ```
 
-### 3. Download KITTI
+### 2. Download KITTI
 
 Register at [https://www.cvlibs.net/datasets/kitti](https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d) and download:
 
@@ -100,13 +94,13 @@ Register at [https://www.cvlibs.net/datasets/kitti](https://www.cvlibs.net/datas
 
 Place the downloaded files under `data/kitti/`.
 
-### 4. Run preprocessing
+### 3. Run preprocessing
 
 ```bash
 python src/preprocess.py --input data/kitti/velodyne --output data/kitti/bev
 ```
 
-### 5. Train the VAE
+### 4. Train the VAE
 
 ```bash
 python src/train.py --epochs 100 --latent-dim 256 --beta 1.0
@@ -115,8 +109,6 @@ python src/train.py --epochs 100 --latent-dim 256 --beta 1.0
 ---
 
 ## Results
-
-*To be updated as experiments complete.*
 
 | Condition | Car mAP | Pedestrian mAP | Cyclist mAP |
 |---|---|---|---|
