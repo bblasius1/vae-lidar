@@ -97,7 +97,6 @@ Register at [https://www.cvlibs.net/datasets/kitti](https://www.cvlibs.net/datas
 |---|---|---|
 | Velodyne point clouds | ~29 GB | ✅ Yes |
 | Training labels | ~5 MB | ✅ Yes |
-| Left color images | ~12 GB | Optional |
 
 Place the downloaded files under `data/kitti/`.
 
@@ -121,31 +120,8 @@ python src/train.py --epochs 100 --latent-dim 256 --beta 1.0
 
 | Condition | Car mAP | Pedestrian mAP | Cyclist mAP |
 |---|---|---|---|
-| Real only (baseline) | — | — | — |
-| Real + VAE augmentation | — | — | — |
-| Real + classical augmentation | — | — | — |
-
----
-
-## Course Connection
-
-This project directly applies the following CPSC 440/550 topics:
-
-- **Variational inference & VAEs** (Lecture 14) — core model and ELBO objective
-- **Transposed convolutions & representation learning** (Lectures 15–16) — encoder/decoder architecture
-- **Bayesian learning & MAP estimation** (Lectures 2, 6) — Gaussian prior/posterior
-- **Gaussian mixture models** (Lectures 10–11) — latent space analysis baseline
-
----
-
-## Timeline
-
-| Week | Dates | Milestone |
-|---|---|---|
-| 1 | Mar 29 – Apr 4 | Setup, KITTI download, BEV preprocessing |
-| 2 | Apr 4 – Apr 11 | DataLoader, train/val/test split |
-| 3 | Apr 11 – Apr 18 | VAE implementation + first training run |
-| 4 | Apr 18 – Apr 23 | Generation, FPD evaluation, qualitative inspection |
-| 5 | Apr 23 – Apr 25 | Downstream detector experiment + writeup |
+| Real only (baseline) | 0.0873 | 0.1332 | 0.0671 |
+| Real + VAE augmentation | 0.0996 | 0.1479 | 0.0732 |
+| Real + classical augmentation | 0.0918 | 0.1159 | 0.0520 |
 
 ---
