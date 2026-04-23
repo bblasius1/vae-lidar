@@ -94,17 +94,9 @@ Register at [https://www.cvlibs.net/datasets/kitti](https://www.cvlibs.net/datas
 
 Place the downloaded files under `data/kitti/`.
 
-### 3. Run preprocessing
+### 3. Run preprocessing and Train the VAE
 
-```bash
-python src/preprocess.py --input data/kitti/velodyne --output data/kitti/bev
-```
-
-### 4. Train the VAE
-
-```bash
-python src/train.py --epochs 100 --latent-dim 256 --beta 1.0
-```
+All process in .ipynb file
 
 ---
 
